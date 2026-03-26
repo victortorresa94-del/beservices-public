@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Guía de Agentes IA · Microsoft · Google · 2026 | beServices</title>
+  <meta name="description" content="Guía completa de agentes IA para empresas. Planes, agentes y seguridad para Microsoft 365 y Google Workspace."/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBlue: '#0075f2',
+            corporateNavy: '#001A41',
+            mutedGray: '#9CA3AF',
+            electricCyan: '#50cabf',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #FFFFFF; color: #001A41; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Inter', sans-serif; font-weight: 400; color: #001A41; letter-spacing: -0.02em; }
+    .hero-heading { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; letter-spacing: -0.02em; }
+    .text-gradient { background: linear-gradient(135deg, #001A41 0%, #50cabf 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .glass-card { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(0,26,65,0.07); box-shadow: 0 4px 20px rgba(0,26,65,0.04); border-radius: 1.5rem; transition: all 0.35s ease; }
+    .glass-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,26,65,0.1); border-color: rgba(80,202,191,0.35); }
+    .plan-card { border: 1px solid rgba(0,26,65,0.08); border-radius: 1.25rem; transition: all 0.3s ease; }
+    .plan-card:hover { border-color: #50cabf; box-shadow: 0 8px 30px rgba(80,202,191,0.15); }
+    .agent-card { border: 1px solid rgba(0,26,65,0.07); border-radius: 1.25rem; transition: all 0.3s ease; background: #fff; }
+    .agent-card:hover { box-shadow: 0 8px 30px rgba(0,26,65,0.08); border-color: rgba(0,26,65,0.12); }
+    .reveal { opacity: 0; transform: translateY(28px); transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .glass-navbar { background: rgba(255,255,255,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,26,65,0.06); }
+    .tag-sm { font-size: 9px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+    @media (max-width: 640px) {
+      .hero-heading { font-size: 2rem; }
+      .hero-img { max-width: 280px !important; }
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-corporateNavy selection:text-white">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full z-50 glass-navbar transition-all duration-300" id="navbar">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="Logo beservices 2026.png" alt="beServices" class="h-6 w-auto"/>
+    </div>
+    <span class="tag-sm text-mutedGray hidden sm:block">Guía Agentes IA · 2026</span>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
+  <!-- Subtle gradient bg -->
+  <div class="absolute inset-0 bg-gradient-to-b from-gray-50/60 to-white pointer-events-none"></div>
+  <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
+      <!-- Text -->
+      <div class="flex-1 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-corporateNavy/5 border border-corporateNavy/10 mb-6 reveal active backdrop-blur-sm">
+          <span class="tag-sm text-corporateNavy">Guía gratuita · 2026</span>
+        </div>
+        <h1 class="hero-heading font-normal mb-6 reveal active" style="transition-delay:100ms">
+          Guía de<br/><span class="font-bold">Agentes</span> <span class="text-gradient font-bold">IA</span>
+        </h1>
+        <p class="text-base sm:text-lg text-mutedGray leading-relaxed mb-3 reveal active max-w-lg mx-auto lg:mx-0" style="transition-delay:200ms">
+          Todo sobre Copilot, Gemini, planes, agentes y seguridad.
+        </p>
+        <p class="text-sm text-mutedGray/60 mb-8 reveal active max-w-lg mx-auto lg:mx-0" style="transition-delay:250ms">
+          Microsoft · Google · Por <strong class="text-corporateNavy">beServices</strong>
+        </p>
+        <a href="#para-quien" class="inline-flex items-center gap-2 px-6 py-3 bg-corporateNavy text-white text-sm font-bold rounded-full hover:bg-corporateNavy/90 transition-colors shadow-lg shadow-corporateNavy/20 reveal active" style="transition-delay:300ms">
+          <i data-lucide="arrow-down" class="w-4 h-4"></i> Explorar guía
+        </a>
+      </div>
+      <!-- Book Image — full-width on mobile -->
+      <div class="flex-shrink-0 w-full max-w-xs sm:max-w-sm lg:max-w-md hero-img reveal active" style="transition-delay:150ms">
+        <img src="a-photorealistic-3d-hardcover-book-mocku_X-HJ7cGxRXGOelhh3mQrDA_KEvaQT9CQ4q3A6eOk9e1IQ_sd.jpeg"
+             alt="Guía de Agentes IA" class="w-full drop-shadow-2xl"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ 01 · PARA QUIÉN ═════════════ -->
+<section id="para-quien" class="py-16 sm:py-20 bg-gray-50/30">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="reveal">
+      <span class="tag-sm text-brandBlue bg-brandBlue/5 px-2 py-1 rounded inline-block mb-3">01</span>
+      <h2 class="text-2xl sm:text-3xl mb-2">¿Para quién es esta <span class="font-bold">guía</span>?</h2>
+      <p class="text-mutedGray text-sm mb-10">Antes de seguir — esto es para ti si…</p>
+    </div>
+    <div class="space-y-3">
+      <div class="glass-card p-5 flex gap-4 items-start reveal">
+        <div class="w-10 h-10 rounded-xl bg-corporateNavy/5 flex items-center justify-center flex-shrink-0"><i data-lucide="building-2" class="w-5 h-5 text-corporateNavy/40"></i></div>
+        <div><p class="font-semibold text-sm mb-0.5">Tu empresa usa M365 o Google Workspace</p><p class="text-xs text-mutedGray">Y quieres ir más allá del correo y los documentos</p></div>
+      </div>
+      <div class="glass-card p-5 flex gap-4 items-start reveal">
+        <div class="w-10 h-10 rounded-xl bg-corporateNavy/5 flex items-center justify-center flex-shrink-0"><i data-lucide="help-circle" class="w-5 h-5 text-corporateNavy/40"></i></div>
+        <div><p class="font-semibold text-sm mb-0.5">Oyes hablar de Copilot y Gemini</p><p class="text-xs text-mutedGray">Pero no tienes claro qué plan necesitas ni qué puedes hacer</p></div>
+      </div>
+      <div class="glass-card p-5 flex gap-4 items-start reveal">
+        <div class="w-10 h-10 rounded-xl bg-corporateNavy/5 flex items-center justify-center flex-shrink-0"><i data-lucide="zap" class="w-5 h-5 text-electricCyan"></i></div>
+        <div><p class="font-semibold text-sm mb-0.5">Tienes procesos manuales y repetitivos</p><p class="text-xs text-mutedGray">Que tu equipo podría dejar de hacer si hubiera un agente</p></div>
+      </div>
+      <div class="glass-card p-5 flex gap-4 items-start reveal">
+        <div class="w-10 h-10 rounded-xl bg-corporateNavy/5 flex items-center justify-center flex-shrink-0"><i data-lucide="shield" class="w-5 h-5 text-corporateNavy/40"></i></div>
+        <div><p class="font-semibold text-sm mb-0.5">Te preocupa la seguridad de los datos</p><p class="text-xs text-mutedGray">Y quieres activar IA sin exponer información sensible</p></div>
+      </div>
+    </div>
+    <div class="mt-8 bg-corporateNavy/5 border-l-4 border-corporateNavy rounded-xl p-5 reveal">
+      <p class="text-sm text-corporateNavy"><strong>BeServices</strong> activa estos agentes para sus clientes. No solo te explicamos qué existe — lo implantamos, lo securizamos y lo conectamos a tus sistemas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ 02 · ECOSISTEMA IA ═════════════ -->
+<section class="py-16 sm:py-20 bg-white">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="reveal">
+      <span class="tag-sm text-brandBlue bg-brandBlue/5 px-2 py-1 rounded inline-block mb-3">02</span>
+      <h2 class="text-2xl sm:text-3xl mb-2">El ecosistema <span class="font-bold">IA</span> hoy</h2>
+      <p class="text-mutedGray text-sm mb-4">Google vs Microsoft — dos plataformas, una misma oportunidad</p>
+      <p class="text-sm text-corporateNavy/60 mb-8">Desde 2025, ambos incluyen IA en sus planes base. La diferencia ya no es si tienes IA — es <strong class="text-corporateNavy">qué haces con ella</strong>.</p>
+    </div>
+    <div class="overflow-x-auto reveal">
+      <table class="w-full text-sm rounded-xl overflow-hidden border border-corporateNavy/8">
+        <thead><tr>
+          <th class="bg-corporateNavy/5 text-corporateNavy font-semibold p-4 text-center">Google</th>
+          <th class="bg-gray-50 text-mutedGray p-4 text-center w-10"></th>
+          <th class="bg-corporateNavy/5 text-corporateNavy font-semibold p-4 text-center">Microsoft</th>
+        </tr></thead>
+        <tbody>
+          <tr class="bg-white border-b border-gray-100">
+            <td class="p-4 text-center text-sm">Gemini en Workspace<br/><span class="text-xs text-mutedGray">(incluido en planes Business)</span></td>
+            <td class="p-4 text-center text-mutedGray/40">→</td>
+            <td class="p-4 text-center text-sm">Copilot M365<br/><span class="text-xs text-mutedGray">(add-on sobre Business Premium)</span></td>
+          </tr>
+          <tr class="bg-gray-50/50 border-b border-gray-100">
+            <td class="p-4 text-center text-sm">Gemini Enterprise<br/><span class="text-xs text-mutedGray">(plataforma agentes Google Cloud)</span></td>
+            <td class="p-4 text-center text-mutedGray/40">→</td>
+            <td class="p-4 text-center text-sm">Copilot Studio<br/><span class="text-xs text-mutedGray">(constructor agentes low-code)</span></td>
+          </tr>
+          <tr class="bg-white">
+            <td class="p-4 text-center text-sm">AppSheet + GWS Studio<br/><span class="text-xs text-mutedGray">(automatizaciones sin código)</span></td>
+            <td class="p-4 text-center text-mutedGray/40">→</td>
+            <td class="p-4 text-center text-sm">Power Automate + Power Apps<br/><span class="text-xs text-mutedGray">(flujos y apps low-code)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-6 bg-electricCyan/5 border-l-4 border-electricCyan rounded-xl p-5 reveal">
+      <p class="text-sm"><strong>Gemini Enterprise NO es un plan de Workspace.</strong> Es una plataforma independiente de Google Cloud (oct. 2025) que funciona con o sin Workspace. Facturación separada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ 03 · PLANES GOOGLE ═════════════ -->
+<section class="py-16 sm:py-20 bg-gray-50/30">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="reveal">
+      <span class="tag-sm text-brandBlue bg-brandBlue/5 px-2 py-1 rounded inline-block mb-3">03</span>
+      <h2 class="text-2xl sm:text-3xl mb-2">Planes <span class="font-bold">Google</span> para agentes IA</h2>
+      <p class="text-mutedGray text-sm mb-8">Desde enero 2025, Gemini viene incluido en todos los planes Business</p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mb-8">
+      <div class="plan-card bg-white overflow-hidden reveal">
+        <div class="px-4 py-2 bg-electricCyan/10 flex items-center gap-2"><span class="tag-sm text-corporateNavy">⭐ Recomendado</span></div>
+        <div class="p-5">
+          <h3 class="text-base font-bold mb-1">Business Standard</h3>
+          <p class="text-xs text-mutedGray italic mb-4">El punto dulce para PYMEs activas</p>
+          <ul class="space-y-2 text-xs text-corporateNavy/70">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Gmail corporativo + 2TB por usuario</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Gemini completo en Gmail, Docs, Sheets, Meet</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Google Vids (creación de vídeo con IA)</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Grabación de reuniones en Drive</li>
+          </ul>
+        </div>
+      </div>
+      <div class="plan-card bg-white overflow-hidden reveal">
+        <div class="px-4 py-2 bg-corporateNavy/5 flex items-center gap-2"><span class="tag-sm text-corporateNavy">Compliance</span></div>
+        <div class="p-5">
+          <h3 class="text-base font-bold mb-1">Business Plus</h3>
+          <p class="text-xs text-mutedGray italic mb-4">Para sectores con obligaciones legales</p>
+          <ul class="space-y-2 text-xs text-corporateNavy/70">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Todo lo de Standard + 5TB</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Google Vault (retención y eDiscovery)</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Gestión avanzada de endpoints</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Imprescindible en sanidad, legal, finanzas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gemini Enterprise -->
+    <h3 class="text-lg mb-3 reveal">Gemini Enterprise — <span class="font-bold">Plataforma de Agentes</span></h3>
+    <div class="overflow-x-auto reveal">
+      <table class="w-full text-xs rounded-xl overflow-hidden border border-corporateNavy/8">
+        <thead><tr class="bg-corporateNavy text-white"><th class="p-3 text-left font-semibold">Tier</th><th class="p-3 text-left font-semibold">Para quién</th><th class="p-3 text-left font-semibold">Incluye</th></tr></thead>
+        <tbody>
+          <tr class="bg-white border-b border-gray-100"><td class="p-3 font-bold">Business</td><td class="p-3 text-corporateNavy/60">Hasta 300 users · Empezar con IA</td><td class="p-3 text-corporateNavy/60">Búsqueda enterprise · Gemini 3 Pro · Deep Research</td></tr>
+          <tr class="bg-brandBlue/5 border-b border-gray-100"><td class="p-3 font-bold text-brandBlue">Standard ⭐</td><td class="p-3 text-corporateNavy/60">Conectar todos los sistemas</td><td class="p-3 text-corporateNavy/60">+ Conectores ilimitados (Salesforce, Jira, Slack…) + NotebookLM Enterprise</td></tr>
+          <tr class="bg-white border-b border-gray-100"><td class="p-3 font-bold">Plus</td><td class="p-3 text-corporateNavy/60">Grandes corporaciones</td><td class="p-3 text-corporateNavy/60">+ 75GB/user + Governance avanzada</td></tr>
+          <tr class="bg-gray-50"><td class="p-3 font-bold">Frontline</td><td class="p-3 text-corporateNavy/60">Trabajadores de campo (min. 150)</td><td class="p-3 text-corporateNavy/60">Usar agentes preconfigurados (no crear)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ 04 · PLANES MICROSOFT ═════════════ -->
+<section class="py-16 sm:py-20 bg-white">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="reveal">
+      <span class="tag-sm text-brandBlue bg-brandBlue/5 px-2 py-1 rounded inline-block mb-3">04</span>
+      <h2 class="text-2xl sm:text-3xl mb-2">Planes <span class="font-bold">Microsoft</span> para agentes IA</h2>
+      <p class="text-mutedGray text-sm mb-8">Copilot se activa sobre Business Premium — Copilot Studio es el constructor</p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mb-4">
+      <div class="plan-card bg-white overflow-hidden reveal">
+        <div class="px-4 py-2 bg-corporateNavy/5 flex items-center gap-2"><span class="tag-sm text-corporateNavy">Base obligatoria</span></div>
+        <div class="p-5">
+          <h3 class="text-base font-bold mb-1">M365 Business Premium</h3>
+          <p class="text-xs text-mutedGray italic mb-4">La base necesaria para activar Copilot</p>
+          <ul class="space-y-2 text-xs text-corporateNavy/70">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Apps Office desktop completas</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Intune MDM + Defender P1</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Azure AD Premium P1</li>
+          </ul>
+        </div>
+      </div>
+      <div class="plan-card bg-white overflow-hidden reveal">
+        <div class="px-4 py-2 bg-brandBlue/5 flex items-center gap-2"><span class="tag-sm text-brandBlue">Add-on Copilot</span></div>
+        <div class="p-5">
+          <h3 class="text-base font-bold mb-1">Microsoft 365 Copilot</h3>
+          <p class="text-xs text-mutedGray italic mb-4">IA en todas las apps de trabajo</p>
+          <ul class="space-y-2 text-xs text-corporateNavy/70">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Copilot en Word, Excel, PowerPoint</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Resume reuniones en Teams</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Gestiona correo en Outlook</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mb-8">
+      <div class="plan-card bg-white overflow-hidden reveal">
+        <div class="px-4 py-2 bg-corporateNavy/5 flex items-center gap-2"><span class="tag-sm text-corporateNavy">Constructor Agentes</span></div>
+        <div class="p-5">
+          <h3 class="text-base font-bold mb-1">Copilot Studio</h3>
+          <p class="text-xs text-mutedGray italic mb-3">Agentes sin código con interfaz visual</p>
+          <ul class="space-y-2 text-xs text-corporateNavy/70">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Agentes con memoria y acciones</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Conecta SharePoint, Dataverse, APIs</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Gobernanza centralizada</li>
+          </ul>
+        </div>
+      </div>
+      <div class="plan-card bg-white overflow-hidden reveal">
+        <div class="px-4 py-2 bg-corporateNavy/5 flex items-center gap-2"><span class="tag-sm text-corporateNavy">Automatización</span></div>
+        <div class="p-5">
+          <h3 class="text-base font-bold mb-1">Power Automate Premium</h3>
+          <p class="text-xs text-mutedGray italic mb-3">Flujos avanzados entre cualquier app</p>
+          <ul class="space-y-2 text-xs text-corporateNavy/70">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Conectores premium (SAP, Salesforce…)</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>AI Builder + RPA desktop</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-electricCyan shrink-0 mt-0.5"></i>Integración nativa Copilot Studio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bg-corporateNavy/5 border-l-4 border-corporateNavy rounded-xl p-5 reveal">
+      <p class="text-sm"><strong>Combinación más potente:</strong> M365 Business Premium + Copilot M365 + Copilot Studio + Power Automate Premium.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ 05 · AGENTES GOOGLE ═════════════ -->
+<section class="py-16 sm:py-20 bg-gray-50/30">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="reveal">
+      <span class="tag-sm text-brandBlue bg-brandBlue/5 px-2 py-1 rounded inline-block mb-3">05</span>
+      <h2 class="text-2xl sm:text-3xl mb-2">10 agentes con <span class="font-bold">Google</span></h2>
+      <p class="text-mutedGray text-sm mb-8">Gemini Enterprise + AppSheet + Google Workspace</p>
+    </div>
+    <div class="space-y-3" id="google-agents">
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="mail" class="w-4 h-4 text-brandBlue"></i></div><h4 class="font-semibold text-sm flex-1">Resumen matutino de Gmail</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">GWS Standard</span></div><p class="text-xs text-corporateNavy/60 ml-11">Tu equipo empieza el día sabiendo qué es urgente, sin perder tiempo en la bandeja</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="video" class="w-4 h-4 text-brandBlue"></i></div><h4 class="font-semibold text-sm flex-1">Actas automáticas de Meet</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">GWS Standard</span></div><p class="text-xs text-corporateNavy/60 ml-11">Cada reunión genera resumen con decisiones y próximos pasos automáticamente</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="file-text" class="w-4 h-4 text-brandBlue"></i></div><h4 class="font-semibold text-sm flex-1">Asistente de documentos internos</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Gemini Ent.</span></div><p class="text-xs text-corporateNavy/60 ml-11">Responde preguntas sobre contratos y manuales usando solo documentos de la empresa</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="bar-chart-2" class="w-4 h-4 text-brandBlue"></i></div><h4 class="font-semibold text-sm flex-1">Analista de datos en lenguaje natural</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Gemini Ent.</span></div><p class="text-xs text-corporateNavy/60 ml-11">Preguntas en español sobre los datos → respuestas y gráficos instantáneos</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="tag" class="w-4 h-4 text-brandBlue"></i></div><h4 class="font-semibold text-sm flex-1">Clasificador y etiquetador de correo</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">GWS Standard</span></div><p class="text-xs text-corporateNavy/60 ml-11">Categoriza, etiqueta y prioriza automáticamente toda la bandeja</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="file-signature" class="w-4 h-4 text-brandBlue"></i></div><h4 class="font-semibold text-sm flex-1">Generador de propuestas comerciales</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Gemini Ent.</span></div><p class="text-xs text-corporateNavy/60 ml-11">Propuesta adaptada al cliente en 2 minutos a partir del CRM y plantillas</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="scan-eye" class="w-4 h-4 text-brandBlue"></i></div><h4 class="font-semibold text-sm flex-1">Auditor de privacidad en Drive</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">GWS Enterprise</span></div><p class="text-xs text-corporateNavy/60 ml-11">Detecta archivos con permisos incorrectos y genera informe semanal</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="calendar" class="w-4 h-4 text-brandBlue"></i></div><h4 class="font-semibold text-sm flex-1">Coordinador de agendas multi-persona</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">GWS Standard</span></div><p class="text-xs text-corporateNavy/60 ml-11">Organiza reuniones de 5+ personas sin intercambio de emails</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="database" class="w-4 h-4 text-brandBlue"></i></div><h4 class="font-semibold text-sm flex-1">Conector Drive-BigQuery</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Gemini Ent.</span></div><p class="text-xs text-corporateNavy/60 ml-11">Datos en Sheets y Drive convertidos en datasets analizables con IA</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="languages" class="w-4 h-4 text-brandBlue"></i></div><h4 class="font-semibold text-sm flex-1">Adaptador multiidioma</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">GWS Standard</span></div><p class="text-xs text-corporateNavy/60 ml-11">Transforma documentos al idioma y tono correcto para cada mercado</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ 06 · AGENTES MICROSOFT ═════════════ -->
+<section class="py-16 sm:py-20 bg-white">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="reveal">
+      <span class="tag-sm text-brandBlue bg-brandBlue/5 px-2 py-1 rounded inline-block mb-3">06</span>
+      <h2 class="text-2xl sm:text-3xl mb-2">10 agentes con <span class="font-bold">Microsoft</span></h2>
+      <p class="text-mutedGray text-sm mb-8">Copilot Studio + Power Automate + Microsoft 365</p>
+    </div>
+    <div class="space-y-3">
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="clipboard-list" class="w-4 h-4 text-corporateNavy/50"></i></div><h4 class="font-semibold text-sm flex-1">Actas inteligentes de Teams</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Copilot M365</span></div><p class="text-xs text-corporateNavy/60 ml-11">Resumen, decisiones y tareas en Planner sin que nadie tome notas</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="inbox" class="w-4 h-4 text-corporateNavy/50"></i></div><h4 class="font-semibold text-sm flex-1">Clasificador de soporte técnico</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Copilot Studio</span></div><p class="text-xs text-corporateNavy/60 ml-11">Emails de soporte clasificados y asignados al técnico correcto</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="file-check" class="w-4 h-4 text-corporateNavy/50"></i></div><h4 class="font-semibold text-sm flex-1">Generador de contratos</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Copilot M365</span></div><p class="text-xs text-corporateNavy/60 ml-11">Contrato o propuesta lista en 3 minutos con plantillas aprobadas</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="shield-check" class="w-4 h-4 text-corporateNavy/50"></i></div><h4 class="font-semibold text-sm flex-1">Validador cumplimiento NIS2</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Copilot Studio</span></div><p class="text-xs text-corporateNavy/60 ml-11">Escanea documentos y configuraciones para verificar NIS2 y RGPD</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="receipt" class="w-4 h-4 text-corporateNavy/50"></i></div><h4 class="font-semibold text-sm flex-1">Procesador de facturas</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Power Automate</span></div><p class="text-xs text-corporateNavy/60 ml-11">Facturas leídas, datos extraídos y registrados en el ERP automáticamente</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="user-plus" class="w-4 h-4 text-corporateNavy/50"></i></div><h4 class="font-semibold text-sm flex-1">Guía de onboarding</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Copilot Studio</span></div><p class="text-xs text-corporateNavy/60 ml-11">Asistente 24/7 que explica procesos y da acceso a recursos desde el día 1</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="bell" class="w-4 h-4 text-corporateNavy/50"></i></div><h4 class="font-semibold text-sm flex-1">Monitor de clientes inactivos</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Power Automate</span></div><p class="text-xs text-corporateNavy/60 ml-11">Detecta clientes sin actividad y alerta al comercial asignado</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="line-chart" class="w-4 h-4 text-corporateNavy/50"></i></div><h4 class="font-semibold text-sm flex-1">Dashboard ejecutivo semanal</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Copilot M365</span></div><p class="text-xs text-corporateNavy/60 ml-11">Informe automático cada lunes con KPIs desde Power BI</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="search" class="w-4 h-4 text-corporateNavy/50"></i></div><h4 class="font-semibold text-sm flex-1">Buscador de SharePoint</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Copilot Studio</span></div><p class="text-xs text-corporateNavy/60 ml-11">Preguntas en lenguaje natural → documento correcto al instante</p></div>
+      <div class="agent-card p-5 reveal"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-corporateNavy/5 flex items-center justify-center"><i data-lucide="message-circle" class="w-4 h-4 text-corporateNavy/50"></i></div><h4 class="font-semibold text-sm flex-1">Chatbot soporte 24/7</h4><span class="tag-sm text-mutedGray bg-gray-100 px-2 py-0.5 rounded">Copilot Studio</span></div><p class="text-xs text-corporateNavy/60 ml-11">Atiende preguntas frecuentes de clientes o empleados sin intervención</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ 07 · SEGURIDAD ═════════════ -->
+<section class="py-16 sm:py-20 bg-corporateNavy text-white relative overflow-hidden">
+  <div class="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-brandBlue/10 rounded-full blur-[120px]"></div>
+  <div class="relative max-w-3xl mx-auto px-6">
+    <div class="reveal">
+      <span class="tag-sm text-electricCyan bg-white/5 px-2 py-1 rounded inline-block mb-3 border border-white/10">07 · Seguridad</span>
+      <h2 class="text-2xl sm:text-3xl text-white mb-2">Antes de activar agentes, <span class="font-bold">securiza</span></h2>
+      <p class="text-white/40 text-sm mb-8">Esta sección es la más importante de toda la guía</p>
+    </div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 mb-10 reveal">
+      <p class="text-sm text-white/70">Copilot y Gemini tienen acceso a todo lo que tus empleados pueden ver. Si los permisos no están configurados, la IA puede mostrar contratos, nóminas o datos de clientes a quien no debe. <strong class="text-white">Esto no es teoría — es lo primero que encontramos en cada auditoría.</strong></p>
+    </div>
+    <div class="space-y-4">
+      <div class="flex gap-4 items-start reveal">
+        <div class="w-10 h-10 rounded-xl bg-brandBlue flex items-center justify-center flex-shrink-0"><i data-lucide="search" class="w-5 h-5 text-white"></i></div>
+        <div><h4 class="font-bold text-base mb-1">Auditoría de permisos</h4><p class="text-sm text-white/50">Revisamos qué puede ver cada usuario en SharePoint, Drive, Teams y OneDrive.</p></div>
+      </div>
+      <div class="flex gap-4 items-start reveal">
+        <div class="w-10 h-10 rounded-xl bg-electricCyan flex items-center justify-center flex-shrink-0"><i data-lucide="shield-check" class="w-5 h-5 text-corporateNavy"></i></div>
+        <div><h4 class="font-bold text-base mb-1">Hardening del entorno</h4><p class="text-sm text-white/50">DLP, etiquetas de sensibilidad, acceso condicional y políticas de retención.</p></div>
+      </div>
+      <div class="flex gap-4 items-start reveal">
+        <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0"><i data-lucide="sparkles" class="w-5 h-5 text-electricCyan"></i></div>
+        <div><h4 class="font-bold text-base mb-1">Activación segura</h4><p class="text-sm text-white/50">Desplegamos agentes solo cuando el entorno está preparado. Dashboards de gobernanza y alertas.</p></div>
+      </div>
+    </div>
+    <div class="mt-10 bg-white/5 border border-white/10 rounded-2xl p-6 reveal">
+      <p class="text-sm"><strong class="text-electricCyan">Besafe</strong> es el servicio de seguridad de BeServices. Auditamos, configuramos y monitorizamos tu entorno antes y después de activar agentes IA.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ CTA ═════════════ -->
+<section class="py-24 sm:py-32 bg-white text-center">
+  <div class="max-w-2xl mx-auto px-6">
+    <h2 class="text-2xl sm:text-3xl mb-4 reveal">¿Listo para activar <span class="font-bold text-gradient">agentes IA</span>?</h2>
+    <p class="text-mutedGray text-sm mb-10 reveal">BeServices activa, securiza y conecta agentes de Microsoft y Google para empresas como la tuya.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center reveal">
+      <a href="https://beservices.es" target="_blank" class="px-8 py-3.5 bg-corporateNavy text-white text-sm font-bold rounded-full hover:bg-corporateNavy/90 transition-colors shadow-lg shadow-corporateNavy/20">beservices.es</a>
+      <a href="mailto:hola@beservices.es" class="px-8 py-3.5 bg-corporateNavy/5 text-corporateNavy text-sm font-bold rounded-full hover:bg-corporateNavy/10 transition-colors border border-corporateNavy/10">hola@beservices.es</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-6 bg-corporateNavy text-center">
+  <p class="text-xs text-white/30">© 2026 beServices · beservices.es</p>
+</footer>
+
+<script>
+  // Reveal on scroll
+  function reveal() {
+    document.querySelectorAll('.reveal').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+    });
+  }
+  window.addEventListener('scroll', reveal);
+  setTimeout(reveal, 100);
+  // Navbar shadow
+  window.addEventListener('scroll', () => {
+    const n = document.getElementById('navbar');
+    window.scrollY > 20 ? n.classList.add('shadow-md') : n.classList.remove('shadow-md');
+  });
+  // Init Lucide
+  lucide.createIcons();
+</script>
+</body>
+</html>
